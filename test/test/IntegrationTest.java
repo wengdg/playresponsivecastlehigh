@@ -17,16 +17,29 @@ import static play.test.Helpers.testServer;
 public class IntegrationTest {
 
   /**
-   * Check to see that the index can be retrieved.
+   * Check to see that all pages can be retrieved.
    */
   @Test
   public void test() {
     running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
       public void invoke(TestBrowser browser) {
-        browser.goTo("http://localhost:3333");
-        assertThat(browser.pageSource()).contains("Welcome");
+        browser.goTo("http://localhost:9000");
+        assertThat(browser.pageSource()).contains("Welcome to Castle High School");
+
+        browser.goTo("http://localhost:9000/student");
+        assertThat(browser.pageSource()).contains("Students/Parents");
+
+        browser.goTo("http://localhost:9000/faculty");
+        assertThat(browser.pageSource()).contains("Faculty/Staff");
+
+        browser.goTo("http://localhost:9000/alumni");
+        assertThat(browser.pageSource()).contains("Alumni/Friends");
+
+        browser.goTo("http://localhost:9000/contact");
+        assertThat(browser.pageSource()).contains("Contact");
+
       }
+    });
   }
-});
 
 }

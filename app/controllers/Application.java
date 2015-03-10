@@ -22,32 +22,32 @@ public class Application extends Controller {
   }
 
   /**
-   * Returns.
-   * @return student.
+   * Return the students/parents page.
+   * @return The resulting students and parents page.
    */
   public static Result student() {
     return ok(Student.render("Students and Parents"));
   }
 
   /**
-   * Returns.
-   * @return faculty.
+   * Returns the faculty/staff page.
+   * @return The resulting faculty and staff page.
    */
   public static Result faculty() {
     return ok(Faculty.render("Faculty and Staff"));
   }
 
   /**
-   * Returns.
-   * @return alumni.
+   * Returns the alumni/friends page.
+   * @return The resulting alumni and friends page.
    */
   public static Result alumni() {
     return ok(Alumni.render("Alumni and Friends"));
   }
 
   /**
-   * Returns.
-   * @return contact.
+   * Returns the contact page.
+   * @return The resulting contact page.
    */
   public static Result contact() {
     return ok(Contact.render("Contact"));

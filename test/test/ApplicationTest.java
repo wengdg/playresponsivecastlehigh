@@ -34,6 +34,9 @@ public class ApplicationTest {
 
   }
 
+  /**
+   * Test the Student page for the word 'Knights'.
+   */
   @Test
   public void renderStudent() {
     Content html = views.html.Student.render("Students and Parents");
@@ -42,6 +45,9 @@ public class ApplicationTest {
 
   }
 
+  /**
+   * Test the Faculty page for the word 'Resources'.
+   */
   @Test
   public void renderFaculty() {
     Content html = views.html.Faculty.render("Faculty and Staff");
@@ -50,13 +56,19 @@ public class ApplicationTest {
 
   }
 
-  @Test
+  /**
+   * Test the Alumni page for the word 'Transcript'.
+   */
   public void renderAlumni() {
     Content html = views.html.Alumni.render("Alumni and Friends");
     assertThat(contentType(html)).isEqualTo("text/html");
     assertThat(contentAsString(html)).contains("Transcript");
 
   }
+
+  /**
+   * Test the Contact page for the word 'General'.
+   */
   @Test
   public void renderContact() {
     Content html = views.html.Contact.render("Contact");
