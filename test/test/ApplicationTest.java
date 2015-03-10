@@ -30,8 +30,38 @@ public class ApplicationTest {
   public void renderTemplate() {
     Content html = views.html.Index.render("Welcome to the home page.");
     assertThat(contentType(html)).isEqualTo("text/html");
-    assertThat(contentAsString(html)).contains("home page");
+    assertThat(contentAsString(html)).contains("Welcome");
+
   }
 
+  @Test
+  public void renderStudent() {
+    Content html = views.html.Student.render("Students and Parents");
+    assertThat(contentType(html)).isEqualTo("text/html");
+    assertThat(contentAsString(html)).contains("Knights");
 
+  }
+
+  @Test
+  public void renderFaculty() {
+    Content html = views.html.Faculty.render("Faculty and Staff");
+    assertThat(contentType(html)).isEqualTo("text/html");
+    assertThat(contentAsString(html)).contains("Resources");
+
+  }
+
+  @Test
+  public void renderAlumni() {
+    Content html = views.html.Alumni.render("Alumni and Friends");
+    assertThat(contentType(html)).isEqualTo("text/html");
+    assertThat(contentAsString(html)).contains("Transcript");
+
+  }
+  @Test
+  public void renderContact() {
+    Content html = views.html.Contact.render("Contact");
+    assertThat(contentType(html)).isEqualTo("text/html");
+    assertThat(contentAsString(html)).contains("General");
+
+  }
 }

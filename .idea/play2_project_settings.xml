@@ -28,15 +28,15 @@
           <value>
             <ProjectSettingsEntry>
               <option name="version" value="2.3.7" />
-              <option name="sourceDir" value="$PROJECT_DIR$/app" />
-              <option name="confDir" value="$PROJECT_DIR$/conf" />
+              <option name="sourceDir" value="C:\Users\Weng\Documents\GitHub\playresponsivecastlehigh\conf" />
+              <option name="confDir" value="C:\Users\Weng\Documents\GitHub\playresponsivecastlehigh\app" />
               <option name="routesImports">
                 <list>
                   <option value="controllers.Assets.Asset" />
                   <option value="play.libs.F" />
                 </list>
               </option>
-              <option name="uri" value="$PROJECT_DIR$" />
+              <option name="uri" value="/C:/Users/Weng/Documents/GitHub/playresponsivecastlehigh" />
             </ProjectSettingsEntry>
           </value>
         </entry>

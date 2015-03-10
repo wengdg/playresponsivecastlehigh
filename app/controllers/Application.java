@@ -3,7 +3,10 @@ package controllers;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.Index;
-import views.html.Page1;
+import views.html.Student;
+import views.html.Faculty;
+import views.html.Alumni;
+import views.html.Contact;
 
 /**
  * Provides controllers for this application.
@@ -19,12 +22,34 @@ public class Application extends Controller {
   }
 
   /**
-   * Returns page1, a simple example of a second page to illustrate navigation.
-   * @return The Page1.
+   * Returns.
+   * @return student.
    */
-  public static Result page1() {
-    return ok(Page1.render("Welcome to Page1."));
-
+  public static Result student() {
+    return ok(Student.render("Students and Parents"));
   }
 
+  /**
+   * Returns.
+   * @return faculty.
+   */
+  public static Result faculty() {
+    return ok(Faculty.render("Faculty and Staff"));
+  }
+
+  /**
+   * Returns.
+   * @return alumni.
+   */
+  public static Result alumni() {
+    return ok(Alumni.render("Alumni and Friends"));
+  }
+
+  /**
+   * Returns.
+   * @return contact.
+   */
+  public static Result contact() {
+    return ok(Contact.render("Contact"));
+  }
 }
