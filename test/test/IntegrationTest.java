@@ -23,19 +23,19 @@ public class IntegrationTest {
   public void test() {
     running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
       public void invoke(TestBrowser browser) {
-        browser.goTo("http://localhost:9000");
+        browser.goTo("http://localhost:3333");
         assertThat(browser.pageSource()).contains("Welcome to Castle High School");
 
-        browser.goTo("http://localhost:9000/student");
+        browser.goTo("http://localhost:3333/student");
         assertThat(browser.pageSource()).contains("Students/Parents");
 
-        browser.goTo("http://localhost:9000/faculty");
+        browser.goTo("http://localhost:3333/faculty");
         assertThat(browser.pageSource()).contains("Faculty/Staff");
 
-        browser.goTo("http://localhost:9000/alumni");
+        browser.goTo("http://localhost:3333/alumni");
         assertThat(browser.pageSource()).contains("Alumni/Friends");
 
-        browser.goTo("http://localhost:9000/contact");
+        browser.goTo("http://localhost:3333/contact");
         assertThat(browser.pageSource()).contains("Contact");
 
       }
